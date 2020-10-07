@@ -1,0 +1,67 @@
+#form-position{
+    float: right;
+    margin-top: 5%;
+    margin-right: 10%;
+}
+#form-Style
+{
+    background-color: rosybrown;
+    width: auto;
+ 
+    padding-top: 10px;
+    border: solid gray 2px;
+    min-height: 300px;
+}
+
+
+
+
+td
+{
+    padding: 5px  10px;
+}
+
+input, select
+{
+    margin: 5px 10px;
+    padding: 5px;
+    outline: none;
+    
+}
+
+.button-space
+{
+    padding: 10px;
+}
+button
+{
+    padding: 5px;
+    width: 70px;
+    border: solid black 2px;
+    border-radius: 10px;
+    background-color: rgb(174, 198, 243);
+    overflow: hidden;
+}
+#btn{
+    word-spacing: 20px;
+}
+#list{
+
+    border: solid black 2px;
+    float: left;
+    min-width: 700px;
+    background-color: rgb(133, 127, 95);
+    color: wheat;
+   }
+
+
+#table-position{
+
+    float: left;
+margin-top: 5%;
+margin-left: 7%;
+}
+h2{
+    font-size: 20px;
+}
+

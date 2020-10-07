@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="form.css">
+    <script src="form.js"></script>
+</head>
+  <body>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <div id="form-position">
+        <h2 >Add / Update Person Form</h2>
+        <form id="form-Style">
+            
+            <table>
+                <tr>
+                    <td>Name :</td>
+                    <td ><input id="name" type="text"></td>
+                </tr>
+    
+                <tr>
+                    <td>Gender :</td>
+                    <td><input name = "gender"  type = "radio" value = "Male"> Male
+                        <input name = "gender" type = "radio" value = "Female"> Female
+                    </td>
+                </tr>
+    
+                <tr>
+                    <td>Age :</td>
+                    <td ><input id="age" type="text"></td>
+                </tr>
+    
+                <tr>
+                    <td>City :</td>
+                    <td>
+                        <select name="" id="city">
+                            <option value="">Select City</option>
+                            <option value="Karachi">Karachi</option>
+                            <option value="Faisalabad">Faisalabad</option>
+                            <option value="Lahore">Lahore</option>
+                            <option value="Islamabad">Islamabad</option>
+                        </select>
+                    </td>
+                </tr>
+    
+                <tr id="btn">
+                    <td colspan="2" align="center" class="button-space">
+                        <button id="button" type="button" onclick="ResetForm()" >reset</button>
+                        <button id="button" type="button" onclick = "AddData()" >add</button>
+                        <button id="button" type="button">update</button>
+                    </td>
+                </tr>
+            
+            </table>
+           </form>
+    </div>
+   
+    <div id="table-position">
+       <h2 id="check">List of Persons</h2>
+     
+                <table id = "list"  class="table table-striped">
+                    <thead>
+                        <tr>
+                            <td>Name</td>
+                            <td>Gender</td>
+                            <td>Age</td>
+                            <td>City</td>
+                            <td>Action</td>
+                        </tr>
+                    </thead>
+        
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+    </div>
+       
+    </body>
+</html>
+
+
+
