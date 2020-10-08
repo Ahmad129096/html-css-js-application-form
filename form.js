@@ -48,11 +48,3 @@ function deleteRow(r) {
   }
 
 //a
-
-
-function deleteRow(r) {
-    var i = r.parentNode.parentNode.rowIndex;
-    document.getElementById("list").deleteRow(i);
-  }
-
-//aah
