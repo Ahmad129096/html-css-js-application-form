@@ -10,9 +10,10 @@ function AddData() {
     gender = gender ? gender.value : '';
     var age = document.getElementById("age").value;
     var city = document.getElementById("city").value;
-     var check = document.getElementById("check")
-     var btn = "<button>Update</button>/<button>Remove</button>";
+    var btn = createbutton()
 
+     
+             
 
 
     // if(name.value==null|| gender.value==null||age.value==null||city.value==null)
@@ -20,18 +21,18 @@ function AddData() {
     //     alert("No field should be empty")
         
     // }
+            
          
-            rows += "<td>" + name + "</td><td>" + gender + "</td><td>" + age + "</td><td>" + city + "</td><td>" + btn +"</td><td>" + "</td>";
+            rows += "<td>" + name + "</td><td>" + gender + "</td><td>" + age + "</td><td>" + city   + "</td><td><input type='button' value='Update' id='upd-btn'>/<input type='button' value='Remove' onclick='deleteRow(this)' id='del-btn'></td>"
             var tbody = document.querySelector("#list tbody");
             var tr = document.createElement("tr");
 
             tr.innerHTML = rows;
             tbody.appendChild(tr);
-        
-         
+       
     
 
-    
+            
     //"</button><button>Update</button>/<button>Remove";
     //div>(button#update{Update}){/}(button#delbtn{Remove})
 
@@ -39,14 +40,11 @@ function AddData() {
 
 function ResetForm() {
 document.getElementById("form-Style").reset();
-}
-
-function DeleteData() {
-
-
 
 }
+function deleteRow(r) {
+    var i = r.parentNode.parentNode.rowIndex;
+    document.getElementById("list").deleteRow(i);
+  }
 
-function Openfb() {
-Console.log("THis is working")
-}
+//aah
