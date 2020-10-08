@@ -22,7 +22,8 @@ function AddData() {
         
     // }
             
-         
+        //  else
+        //  { 
             rows += "<td>" + name + "</td><td>" + gender + "</td><td>" + age + "</td><td>" + city   + "</td><td><input type='button' value='Update' id='upd-btn'>/<input type='button' value='Remove' onclick='deleteRow(this)' id='del-btn'></td>"
             var tbody = document.querySelector("#list tbody");
             var tr = document.createElement("tr");
@@ -32,6 +33,9 @@ function AddData() {
        
     
 
+        //   }
+        
+
             
     //"</button><button>Update</button>/<button>Remove";
     //div>(button#update{Update}){/}(button#delbtn{Remove})
@@ -40,11 +44,24 @@ function AddData() {
 
 function ResetForm() {
 document.getElementById("form-Style").reset();
+var tableHeaderRowCount = 1;
+var table = document.getElementById('list');
+var rowCount = table.rows.length;
+for (var i = tableHeaderRowCount; i < rowCount; i++) {
+    table.deleteRow(tableHeaderRowCount);
+}
 
 }
 function deleteRow(r) {
     var i = r.parentNode.parentNode.rowIndex;
     document.getElementById("list").deleteRow(i);
   }
+
+  function updateinfo()
+  {
+    
+
+  }
+ 
 
 //a
