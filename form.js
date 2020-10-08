@@ -10,7 +10,7 @@ function AddData() {
     gender = gender ? gender.value : '';
     var age = document.getElementById("age").value;
     var city = document.getElementById("city").value;
-    var btn = createbutton()
+    
 
      
              
@@ -42,6 +42,14 @@ function ResetForm() {
 document.getElementById("form-Style").reset();
 
 }
+function deleteRow(r) {
+    var i = r.parentNode.parentNode.rowIndex;
+    document.getElementById("list").deleteRow(i);
+  }
+
+//a
+
+
 function deleteRow(r) {
     var i = r.parentNode.parentNode.rowIndex;
     document.getElementById("list").deleteRow(i);
