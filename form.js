@@ -5,7 +5,7 @@ function AddData() {
   
 
     var rows = "";
-    var name = document.getElementById("name").value;;
+    var name = document.getElementById("name").value;
     var gender = document.querySelector('input[name="gender"]:checked');
     gender = gender ? gender.value : '';
     var age = document.getElementById("age").value;
@@ -16,15 +16,15 @@ function AddData() {
              
 
 
-    if(name==""|| gender==""||age==""||city=="")
-    {
-        alert("No field should be empty")
+    // if(name==""|| gender==""||age==""||city=="")
+    // {
+    //     alert("No field should be empty")
         
-    }
+    // }
             
-         else
-         { 
-            rows += "<td>" + name + "</td><td>" + gender + "</td><td>" + age + "</td><td>" + city   + "</td><td><input type='button' onclick='edit_row(this)' value='Update' id='upd-btn'>/<input type='button' value='Remove' onclick='deleteRow(this)' id='del-btn'></td>"
+    //      else
+    //      { 
+            rows += "<td>" + name + "</td><td>" + gender + "</td><td>" + age + "</td><td>" + city   + "</td><td><input type='button' onclick='edit_row()' value='Update' id='upd-btn'>/<input type='button' value='Remove' onclick='deleteRow(this)' id='del-btn'></td>"
             var tbody = document.querySelector("#list tbody");
             var tr = document.createElement("tr");
 
@@ -34,7 +34,7 @@ function AddData() {
        
     
 
-          }
+    //       }
         
 
             
@@ -67,25 +67,33 @@ function deleteRow(r) {
     
 
   }
+  function edit_row()
+  {
+    var rindex, table = document.getElementById("list")
 
-  function edit_row(no)
-{
- document.getElementById("upd-btn"+no).style.display="none";
- var form = document.getElementById("form-Style")
+    for( var i=0; i<table.rows.length; i++)
+    {
+        table.rows[i].onclick = function()
+        {
+            rindex = this.rowIndex;
+            document.getElementById("name").value =this.cells[0].innerHTML;
+            document.getElementById("age").value =this.cells[2].innerHTML;
+            document.getElementById("city").value =this.cells[3].innerHTML;
+        }
+    }
 
-	
- var name=document.getElementById("name"+no);
- var gender=document.getElementById("gender"+no);
- var age=document.getElementById("age"+no);
- var city=document.getElementById("city"+no);
-	
- var name_data=name.innerHTML;
- var gender_data = gender.innerHTML;
- var age_data=age.innerHTML;
- var city_data = city.innerHTML;
-	form.appendChild(name_data)
+  }
 
-}
- 
+  function save_row() {
+       var rindex, table = document.getElementById("list")
+   
+    var name = document.getElementById("name").value;
+    var age = document.getElementById("age").value;
+    var city = document.getElementById("city").value;
 
-//a
+    table.rows[rindex].cells[0].innerHTML =name;
+
+    table.rows[rindex].cells[2].innerHTML =age;
+    table.rows[rindex].cells[3].innerHTML =city;
+      
+  }
