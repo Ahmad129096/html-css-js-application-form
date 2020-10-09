@@ -16,15 +16,15 @@ function AddData() {
              
 
 
-    // if(name.value==null|| gender.value==null||age.value==null||city.value==null)
-    // {
-    //     alert("No field should be empty")
+    if(name==""|| gender==""||age==""||city=="")
+    {
+        alert("No field should be empty")
         
-    // }
+    }
             
-        //  else
-        //  { 
-            rows += "<td>" + name + "</td><td>" + gender + "</td><td>" + age + "</td><td>" + city   + "</td><td><input type='button' value='Update' id='upd-btn'>/<input type='button' value='Remove' onclick='deleteRow(this)' id='del-btn'></td>"
+         else
+         { 
+            rows += "<td>" + name + "</td><td>" + gender + "</td><td>" + age + "</td><td>" + city   + "</td><td><input type='button' onclick='edit_row(this)' value='Update' id='upd-btn'>/<input type='button' value='Remove' onclick='deleteRow(this)' id='del-btn'></td>"
             var tbody = document.querySelector("#list tbody");
             var tr = document.createElement("tr");
 
@@ -34,7 +34,7 @@ function AddData() {
        
     
 
-        //   }
+          }
         
 
             
@@ -67,6 +67,25 @@ function deleteRow(r) {
     
 
   }
+
+  function edit_row(no)
+{
+ document.getElementById("upd-btn"+no).style.display="none";
+ var form = document.getElementById("form-Style")
+
+	
+ var name=document.getElementById("name"+no);
+ var gender=document.getElementById("gender"+no);
+ var age=document.getElementById("age"+no);
+ var city=document.getElementById("city"+no);
+	
+ var name_data=name.innerHTML;
+ var gender_data = gender.innerHTML;
+ var age_data=age.innerHTML;
+ var city_data = city.innerHTML;
+	form.appendChild(name_data)
+
+}
  
 
 //a
