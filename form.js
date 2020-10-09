@@ -30,6 +30,7 @@ function AddData() {
 
             tr.innerHTML = rows;
             tbody.appendChild(tr);
+            reset()
        
     
 
@@ -55,6 +56,10 @@ for (var i = tableHeaderRowCount; i < rowCount; i++) {
 function deleteRow(r) {
     var i = r.parentNode.parentNode.rowIndex;
     document.getElementById("list").deleteRow(i);
+  }
+  function reset()
+  {
+    document.getElementById("form-Style").reset();
   }
 
   function updateinfo()
